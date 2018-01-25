@@ -1,0 +1,6 @@
+1. What is System Administration?
+2. What kind of job need to do for a system administer?
+3. How about the career path of System Administration?
+4. What are learning methods should we get?
+5. What are features of UNIX:
+

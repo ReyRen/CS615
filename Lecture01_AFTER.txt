@@ -1,0 +1,44 @@
+1. What is System Administration?
+	is a person who is responsible for the upkeep, 
+	configuration, and reliable operation of 
+	computer systems; especially multi-user computers, 
+	such as servers. The system administrator seeks to 
+	ensure that the uptime, performance, resources,
+	and security of the computers he or she manages meet
+	the needs of the users, without exceeding a set budget 
+	when doing so.
+	
+2. What kind of job need to do for a system administer?
+	There is no precise job description
+	often learned by experience
+	“makes thins run”
+	work behind the scenes
+	often known as Operator, Network Administrator, System 
+		Programmer, System Manager, Service Engineer, 
+		Site Reliability Engineer etc.	
+3. How about the career path of System Administration?
+	1. few degree grating programs.
+	2. heavy reliance on practical experience
+	3. specializations in many different areas possible
+	4. breadth of expertise as necessary as depth in some areas.
+	5. background knowledge and requirements vary.
+4. What are learning methods should we get?
+	1. know how to ask questions.
+	2. know where to ask questions
+	3. read critically.
+	4. read critically.
+	5. know what you don’t know.
+	6. understand what you’re doing.
+	7. understand why you’re doing it.
+	8. seek information exchange.
+5. What are features of UNIX:
+	1. multi-user concepts:
+		user privileges
+		file permissions
+		process ownership and priorities
+		disk quotas
+	2. security considerations
+		protect users’ data
+		protect communication
+		protect superuser account
+
