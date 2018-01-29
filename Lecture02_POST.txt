@@ -1,0 +1,5 @@
+1. What's the difference of DAS, NAS and SAN?
+2. What is the file system?
+3. What is the LVM?
+4. What's the difference between different kinds of RAID?
+5. What kinds of file system used on the Unix?
