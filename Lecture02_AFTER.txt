@@ -1,0 +1,116 @@
+1. What's the difference of DAS, NAS and SAN?
+
+NAS
+	But what if you can provide access to your file-system 
+	to other computers (for transferring files)? Many protocols 
+	have been created over the years to accomplish easy file 
+	sharing on a Network with other computers, as an example 
+	I will only name the main per Operating System: UNIX and 
+	the likes - NFS , DOS/Windows - CIFS/aka.SMB, Apple - AFP. 
+	What they do is share files over a network, of course file 
+	implies an underlying file-system structure and file-system 
+	implies block device, but because it's done over a network 
+	it's called as NAS - Network Attached Storage. All of this 
+	interfaces explicitly prohibit remote lookups of block addresses 
+	(for security reasons first) and normally such interfaces are 
+	not even implemented. Network file systems can be considered 
+	safe enough to be used in a concurrent way, the Protocol 
+	implementation will take care of problems due to concurrent 
+	access to the same resource (file), normally by locking the 
+	file to a single user/requester. While any computer can share 
+	files over a network and could be called NAS, normally by NAS 
+	you identify only devices which main purpose is to share files 
+	over the network. Normally NAS operates on IP/TCP Ethernet 
+	networks and most can easily provide access to your data over 
+	the Internet.
+SAN
+	Let's say that I like to read my data by block numbers, because 
+	I've written my own software but I'm in need of many disk drives, 
+	more than a single computer can host. The solution would be to 
+	share the disks of other computers, but as said before my NAS 
+	doesn't provide a way to lookup block numbers remotely. So I 
+	will need to use another protocol to share my disk drives,
+	one that doesn't need a file system to operate. The following 
+	interfaces/protocols/networks exists today to share disks over 
+	a network.
+DAS
+	The simplest storage is a Hard Disk connected to your computer/server. 
+	Hard disk drives need to communicate somehow, and they need to 
+	use a well defined physical interface and protocol in order for
+	your computer to understand them, the most common interface and 
+	protocol employed today for PC is the S-ATA or Serial ATA or 
+	Serial Advanced Technology Attachment. So a hard disk which is 
+	physically connected trough the same interface to your PC is 
+	identified as a Direct Attached Storage or DAS for short. To make 
+	it clear, ANY block device which is directly connected to your 
+	system makes a DAS, even an USB stick is a DAS (but the interface 
+	is USB in this case). And unless you access your disk by block 
+	numbers you need a file system on top of it in order to put it at 
+	good use.
+
+2. What is the file system?
+
+	In computing, a file system or filesystem is used to control how 
+	data is stored and retrieved. Without a file system, information 
+	placed in a storage medium would be one large body of data with 
+	no way to tell where one piece of information stops and the next 
+	begins. By separating the data into pieces and giving each piece 
+	a name, the information is easily isolated and identified. Taking 
+	its name from the way paper-based information systems are named, 
+	each group of data is called a "file". The structure and logic 
+	rules used to manage the groups of information and their names 
+	is called a "file system".
+
+3. What is the LVM?
+
+	LVM is a tool for logical volume management which includes 
+	allocating disks, striping, mirroring and resizing logical 
+	volumes.
+	With LVM, a hard drive or set of hard drives is allocated to 
+	one or more physical volumes. LVM physical volumes can be placed 
+	on other block devices which might span two or more disks.
+	The physical volumes are combined into logical volumes, with 
+	the exception of the /boot/ partition. The /boot/ partition cannot 
+	be on a logical volume group because the boot loader cannot read it. 
+	If the root (/) partition is on a logical volume, create a separate 
+	/boot/ partition which is not a part of a volume group.
+	Since a physical volume cannot span over multiple drives, to span 
+	over more than one drive, create one or more physical volumes per drive.
+	
+4. What's the difference between different kinds of RAID?
+	
+	RAID is a technology that is used to increase the performance 
+	and/or reliability of data storage. The abbreviation stands 
+	for Redundant Array of nexpensive Disks. A RAID system consists of 
+	two or more drives working in parallel. These disks can be hard discs, 
+	but there is a trend to also use the technology for SSD (solid state drives). 		
+	There are different RAID levels, each optimized for a specific 
+	situation. These are not standardized by an industry group or 
+	standardization committee. This explains why companies sometimes 
+	come up with their own unique numbers and implementations. 
+
+	RAID 0 – striping
+	RAID 1 – mirroring
+	RAID 5 – striping with parity
+	RAID 6 – striping with double parity
+	RAID 10 – combining mirroring and striping
+	The software to perform the RAID-functionality and control the drives 
+	can either be located on a separate controller card (a hardware RAID 
+	controller) or it can simply be a driver. Some versions of Windows, 
+	such as Windows Server 2012 as well as Mac OS X, include software RAID 			
+	functionality. Hardware RAID controllers cost more than pure software, 
+	but they also offer better performance, especially with RAID 5 and 6.
+
+	RAID-systems can be used with a number of interfaces, including SCSI, 
+	IDE, SATA or FC (fiber channel.) There are systems that use SATA disks 
+	internally, but that have a FireWire or SCSI-interface for the host system.
+
+	Sometimes disks in a storage system are defined as JBOD, which stands 
+	for ‘Just a Bunch Of Disks’. This means that those disks do not use a 
+	specific RAID level and acts as stand-alone disks. This is often done 
+	for drives that contain swap files or spooling data.
+
+5. What kinds of file system used on the Unix?
+	
+	Btrfs, ext2, ext3, ext4, JFS, ffs...
+	
