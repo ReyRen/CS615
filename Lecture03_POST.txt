@@ -1,0 +1,5 @@
+1. What is the boot process might include?
+2. What's the difference between static data and variable data?
+3. What's the basic OS installation phases?
+4. What's the OS installation details?
+5. What's the manual installation process?
