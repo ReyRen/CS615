@@ -1,0 +1,58 @@
+1. What is the boot process might include?
+
+	a. Power_on self Test(POST) a few very basic routines intended 
+		to insure the hardware is not obviously faulty.
+	b. Execuation of the primary boot loader - a simple program stored
+		in read-only memory.
+	c. Access of the MBR - a special boot sector found on the primary
+		boot device. 
+	d. Execution of a secondary or second-stage boot loader - a small
+		program allowing the user to interactively choosen an
+		operating systems or kernel to boot. 
+	e. Loading of the hypervisor and stating of the privileged domain
+	f. Initializationg of the virtual hardware by the domU for the guest
+			OS.
+	g. Loading of the guest OS kernel - booting, initialzing hardware, 
+		loading modules. 
+	h. init(8) - one of the few processes created explicitly by the
+		kernel.
+	j. starting of system servies.
+	k. The interactive system runs, presenting a login prompt. 
+
+2. What's the difference between static data and variable data?
+	
+	Files that are not expected to change during the runtime of the 
+	system are considered static. This includes the kernel, all system 
+	libraries and binaries and many data files. Note that these files may, 
+	of course, be changed when the system is upgraded, for example,
+	but are not modified under normal circumstances.
+
+3. What's the basic OS installation phases?
+
+	a. Hardware identification, provisioning and registration. 
+	b. Base OS installation.
+	c. Installation of add-on applications.
+	d. Initial minimum system configuration. 
+	e. System registration.
+	f. System restart.
+
+4. What's the OS installation details?
+
+	a. Boot the system. 
+	b. Identify disks.
+	c. Create partition tables.
+	d. Create file systems.
+	f. Make the system bootable.
+	g. Install the OS.
+	h. Install add-on software.
+	I. Basic system configuration.
+	j. Reboot.
+
+5. What's the manual installation process?
+
+	a. Availability.
+	b. Customization and Optimization.
+	c. Adding Support for your OS.
+	d. Adding/removing features. 
+	e. Use of latest version.
+	f. Security. 
