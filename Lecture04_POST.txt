@@ -1,0 +1,6 @@
+1. What types of users on the Unix?
+2. What types of users of groups?
+3. What is the kerberos and how it works?
+4. What's the different ways of providing a proof of authentication?
+5. Why the passwd of users are not in the /etc/passwd?
+6. How to solve the rainbow tables attack problem?
