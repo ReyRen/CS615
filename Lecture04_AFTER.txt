@@ -1,0 +1,81 @@
+1. What types of users on the Unix?
+	a.The /etc/passwd file, on a NetBSD system. Reviewing 
+		the first few rows, we find most of them reference 
+		so-called system accounts, present to allow specific 
+		services to run with only the permissions they need. 
+		This ensures, for example, that a software error in one 
+		deamon cannot accidentally lead to access or deletion of 
+		files owned by another user
+	b. role accounts: accounts that, while not specifically tied to a 
+		single person, are used to allow multiple people to initiate 
+		certain well-defined actions. A common example is a role 
+		account to allow for auto- mated updates to a given service 
+		or application
+	c.  In order to manage the resources to be made available to different
+ 		users, to control the system, to add or remove software etc., 
+		we require the use of an omnipotent account, known as the superuser. 
+		This account is commonly calledtherootaccount,and is identified by 
+		the numeric user-ID0
+
+2. What types of users of groups?
+	
+	1.In a small commercial environment, such as a start-up, 
+		the good will and intent to collaborate for all 
+		users of your systems is implied. In such environments 
+		all users do frequently require the same or at least 
+		similar access to all systems, as responsibilities are 
+		shared and job duties overlap
+	2.As the environment grows in size, however, you will find that 
+		you need to group accounts more carefully. For example, 
+		all developers on a given software project require access
+		to systems on which to build the software, write access 
+		to the central source revision control repository and the 
+		like, and so are grouped together
+	3. In even larger companies, you may find that groups sharing access 
+		to the same set of servers may have competing resource 
+		requirements, even if we assume that every user has been 
+		given an account for the ultimate benefit of the 
+		organization at large	
+
+3. What is the kerberos and how it works?
+
+	Kerberos differs from username/password authentication methods 
+	because instead of authenticating each user to each network 
+	service, it uses symmetric encryption and a trusted third 
+	party — known as the Key Distribution Center (KDC) — to 
+	authenticate users to a suite of network services. Once a user 
+	authenticates to the KDC, it sends a ticket specific to that 
+	session back the user's machine and any kerberized services 
+	look for the ticket on the user's machine rather than asking 
+	the user to authenticate using a password.
+
+4. What's the different ways of providing a proof of authentication?
+
+	something you know, for example 
+	a password • something you have, for example a physical 
+	key or a hardware token • something you are, a biometric factor, 
+	such as e.g. a fingerprint
+
+5. Why the passwd of users are not in the /etc/passwd?
+	
+	we do not actually store clear text passwords in a database, 
+	as this would mean that anybody (and any process) able to 
+	access this database had access to all users’ passwords. 
+	Instead, the use of a hash en- sures that even using a 
+	privileged account, we cannot see the users’ clear text 
+	passwords. Still, we wish to protect the password hashes 
+	from prying eyes, which is why our Unix systems no longer 
+	store them in the world- readable /etc/passwd database, but 
+	instead in a separate, protected file (such as /etc/master.passwd 
+	on BSD derived systems or /etc/shadow on many System V derived 
+	Unix versions)
+
+6. How to solve the rainbow tables attack problem?
+
+	The solutions, or rather, the efforts to at least partially 
+	address these issues include the use of a password salt, 
+	the previously mentioned small amount of data added to the 
+	user’s password prior to the application of the hash function, 
+	thereby yielding a different hash on unrelated systems despite 
+	the password being the same and thus defeating simple rainbow 
+	table look ups.
