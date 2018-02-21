@@ -1,0 +1,5 @@
+1. What's the difference between IPV4 and IPV6?
+2. What happens when you type an URL in the browser and press enter?
+3. What is the ISP and what's jobs need the ISP do?
+4. Why the TCP is reliable protocol? 
+5. What's the difference between TCP and UDP? 
