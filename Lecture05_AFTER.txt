@@ -1,0 +1,58 @@
+1. What's the difference between IPV4 and IPV6?
+
+	An IP address is binary numbers but can be stored as text for
+	human reader. For example, a 32-bit numeric address(IPv4) is
+	is written in decimal as four numbers separated by periods. 
+	Each number can be zero to 255. For example, 1.160.10.240
+	could be an IP address.
+	IPv6 addresses are 128-bit IP address written in hexadecimal 
+	and separated by colons. An example IPv6 address could be written
+	like this: 3ffe:1900:4545:3:200:f8ff:fe21:67cf.
+
+2. What happens when you type an URL in the browser and press enter?
+
+	a. You type maps.google.com into the address bar of your browser. 
+	b. The browser checks the cache for a DNS record to find the
+	   corresponding IP address of maps.google.com.
+	c. If the requested URL is not in the cache, IPS's DNS server 
+	   initiates a DNS query to find the IP address of the server that
+	   hosts maps.google.com
+	d. Browser initiates a TCP connection with the server. 
+	e. The browser sends an HTTP request to the web server.
+	f. The server handles the request and sends back a response/
+	g. The server sends out an HTTP response. 
+	h. The browser displays the HTML content( for HTML resoonses
+		which is the most common.)	
+
+3. What is the ISP and what's jobs need the ISP do?
+
+	The Internet service provider(ISP) is an organization that 
+	provides services accesing and using the Internet. Internet
+	service providers may be orgainzed in various forms, such as
+	commercial, community-owned, non-profit, or otherwise privately
+	owned. 
+	Internet service typically provided by ISPs include Internet 
+	access, Internet transit, domain name registration, web hosting
+	Usenet service and colocation. 
+
+4. Why the TCP is reliable protocol? 
+
+	The reason that Transmission Control Protocol (TCP) is considered
+	'reliable' is the protocol itself checks to see if everything that
+	was transmission has delivered at the receiving end(it may not have
+	been due to packet loss). TCP allows for the retransmission of lost
+	packets, thereby making sure that all data transmitted is (eventually)
+	received. 
+	
+5. What's the difference between TCP and UDP? 
+	
+	Both TCP and UDP are protocols used for sending bits of data-known
+	as packets-over the Intenet. They both build on top of the Internet
+	protocol. In other words, whether you are sending a packet via TCp
+	or UDP, that packet is sent to an IP address. These packets are treated 
+	similarly, as they are forwarded from your computer to intermediary
+	routers and on to the destination.
+	TCP and UDP are not the only protocols that work on top of IP. However, 
+	they are the most widely used. They widely used term "TCP/IP" refers to 
+	TCP over IP. UDP over IP could just as well be refered to as "UDP/IP",
+	although this is not a common term.
