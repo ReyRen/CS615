@@ -1,0 +1,62 @@
+1. How's the ARP works？
+
+	a. ARP Cache: After resolving MAC address, 
+	the ARP sends it to the source where it
+	stores in a table for future reference. 
+	The subsequent communications can use the 
+	MAC address from the table.
+
+	b. ARP Cache Timeout: It indicates the 
+	time for which the MAC address in the 
+	ARP cache can reside.
+
+	c.ARP request: This is nothing but 
+	broadcasting a packet over the network 
+	to validate whether we came across 
+	destination MAC address or not.
+
+	d.ARP response: It is the MAC address 
+	response that the source receives from 
+	the destination which aids in further 
+	communication of the data.
+
+2. What is the ND, and how is works?
+
+	The IPv6 neighbor discovery process uses 
+	Internet Control Message Protocol (ICMP) 
+	messages and solicited-node multicast addresses 
+	to determine the link-layer address of a neighbor 
+	on the same network (local link), verify the 
+	reachability of a neighbor, and track neighboring 
+	devices.
+	The IPv6 static cache entry for neighbor discovery 
+	feature allows static entries to be made in the 
+	IPv6 neighbor cache. Static routing requires an 
+	administrator to manually enter IPv6 addresses, 
+	subnet masks, gateways, and corresponding Media 
+	Access Control (MAC) addresses for each interface 
+	of each device into a table. Static routing enables 
+	more control but requires more work to maintain the 
+	table. The table must be updated each time routes are 
+	added or changed.	
+
+3. What is the ICMP, and how's works?
+
+	ICMP (Internet Control Message Protocol) is an 
+	error-reporting protocol network devices like routers 
+	use to generate error messages to the source IP address 
+	when network problems prevent delivery of IP packets. 
+	ICMP creates and sends messages to the source IP address 
+	indicating that a gateway to the Internet that a router, 
+	service or host cannot be reached for packet delivery. 
+	Any IP network device has the capability to send, 
+	receive or process ICMP messages.
+
+
+
+4. Give some tools for use with Network analysis?
+	
+	TCPDump
+	Netstat
+	fping
+	nmap
