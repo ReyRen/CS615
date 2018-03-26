@@ -1,0 +1,76 @@
+1. How the process of HTTP to the HTTPS?
+
+	If you are familiar with the backend of a website, then switching to 
+	HTTPS is fairly straightforward in practice. The basic steps are as follows.
+
+	1. Purchase an SSL certificate and a dedicated IP address from your hosting 
+	company.
+	2. Install and configure the SSL certificate.
+	3. Perform a full back-up of your site in case you need to revert back.
+	4. Configure any hard internal links within your website, from HTTP to HTTPS.
+	5. Update any code libraries, such as JavaScript, Ajax and any third-party 
+	plugins.
+	6. Redirect any external links you control to HTTPS, such as directory listings.
+	7. Update htaccess applications, such as Apache Web Server, LiteSpeed, NGinx 
+	Config and your internet services manager function (such as Windows Web Server), 
+	to redirect HTTP traffic to HTTPS.
+	8. If you are using a content delivery network (CDN), update your CDN's SSL 
+	settings.
+	9. Implement 301 redirects on a page-by-page basis.
+	10. Update any links you use in marketing automation tools, such as email links.
+	11. Update any landing pages and paid search links.
+	12. Set up an HTTPS site in Google Search Console and Google Analytics
+
+2. How to configure an HTTPS server?
+
+	This procedure assumes that your site has already has a certificate assigned to 
+	it.
+	1. Log on to the Web server computer as an administrator.
+	2. Click Start, point to Settings, and then click Control Panel.
+	3. Double-click Administrative Tools, and then double click Internet Services 
+	Manager.
+	4. Select the Web site from the list of different served sites in the left pane.
+	5. Right-click the Web site, folder, or file for which you want to configure SSL 
+	communication, and then click Properties.
+	6. Click the Directory Security tab.
+	7. Click Edit.
+	8. Click Require secure-channel (SSL) if you want the Web site, folder, or file to 
+	require SSL communications.
+	9. Click Require 128-bit encryption to configure 128-bit (instead of 40-bit) 
+	encryption support.
+	10. To allow users to connect without supplying their own certificate, click 
+	Ignore client certificates.
+	Alternatively, to allow a user to supply their own certificate, use Accept client 
+	certificates.
+	11. To configure client mapping, click Enable client certificate mapping, and then 
+	click Edit to map client certificates to users. 
+	If you configure this functionality, you can map client certificates to individual 
+	users in Active Directory. You can use this functionality to automatically 
+	identify a user according to the certificate they supplied when they access the 
+	Web site. You can map users to certificates on a one-to-one basis (one certificate 
+	identifies one user) or you can map many certificates to one user (a list of 
+	certificates is matched against a specific user according to specific rules. The 
+	first valid match becomes the mapping).
+	12. Click OK.
+
+3. How the SMTP works?
+
+	I think http://swipemail.io/2016/08/30/how-smtp-works/ is a pretty good 	
+	explanation. 
+
+4. How to configure an SMTP server?
+
+	1. Connect to your server via SSH (more info).
+	2. Switch to the root user (more info).
+	3. Enter the following line into /etc/postfix/main.cf using a text editor of your 
+	choice:
+		relayhost = [dedrelay.secureserver.net]
+	4. The Postfix mail service will need to be reloaded for the changes to take 
+	effect. Use the following command to reload the Postfix mail service on your 
+	server:
+		service postfix reload
+	5. Use the following command to check the Postfix SMTP relay server setting:
+		grep relayhost /etc/postfix/main.cf
+	If the SMTP relay server is configured properly the command should return the 
+	following:
+		relayhost = [dedrelay.secureserver.net]
