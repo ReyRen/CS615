@@ -1,0 +1,2 @@
+1. The relatins between sh and bash.
+2. What is the Unix Philosophy?
