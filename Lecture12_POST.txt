@@ -1,0 +1,3 @@
+1. How do private-key or symmetric cryptography and public-key or asymmetric cryptography 
+	differ?
+2. What is the difference between encrypting a string and hashing it?

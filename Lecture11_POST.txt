@@ -1,0 +1,2 @@
+1. What is the Distributed Systems?
+2. What is the Puppet?

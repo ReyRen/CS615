@@ -1,0 +1,21 @@
+1. What is the Distributed Systems?
+	
+	CM systems are distributed systems. As such, they are subject to the CAP Theorem:
+	Consistency: all systems managed by the CM are consistent within their respective 
+	service definition.
+	Availability: the services managed by the CM are kept available, even if no 
+	further updates or change sets can be retrieved.
+	Partition tolerance: the CM system can (continue to) operate despite interruptions 
+	between its components; e.g. intermediate (coordinated) changes are not required.
+
+2. What is the Puppet?
+
+	Puppet gives you an automatic way to inspect, deliver, operate and future-proof 
+	all of your software, no matter where it runs. With the Puppet approach, you know 
+	what you have so you can control and enforce consistency across it, secure it and 
+	keep it compliant, all the while modernizing it as business needs dictate. You 
+	define what you want your apps and infrastructure to look like using a common 
+	easy-to-read language. From there you can share, test and enforce the changes you 
+	want to make across your data center and cloud platforms. And at every step of the 
+	way, you have the visibility and reporting you need to make decisions and prove 
+	compliance.

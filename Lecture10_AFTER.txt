@@ -1,0 +1,18 @@
+1. What do we need backups?
+	a. long-term storage/archival
+	b. recover from data loss due to
+		1). equipment failure
+		2). bozotic users
+		3). natural disaster
+		4). security breach
+		5). software bugs
+2. What is the ZFS snapshots?
+	a. ZFS uses a copy-on-write transactional object model(new data does not 
+	overwrite existing data, instead modifications are written to a new location
+	with existing data being referenced), similar to WAFL
+	b. a snapshot is a read-only copy of a file system(cheap and near instantaneous,
+	due to CoW)
+	c. initially consumes to additional disk space; the writable filesystem is made
+	available as "clone"
+	d. conceptually provides a branched view of the filesystem; normally only the 
+	"active" filesystem is writable. 
