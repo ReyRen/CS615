@@ -1,0 +1,28 @@
+1. How do private-key or symmetric cryptography and public-key or asymmetric cryptography 
+	differ?
+
+	1. Symmetric encryption uses a single key that needs to be shared among the people 
+	who need to receive the message while asymmetrical encryption uses a pair of 
+	public key and a private key to encrypt and decrypt messages when communicating.
+	2. Symmetric encryption is an old technique while asymmetric encryption is 
+	relatively new.
+	3. Asymmetric encryption was introduced to complement the inherent problem of the 
+	need to share the key in symmetrical encryption model, eliminating the need to 
+	share the key by using a pair of public-private keys.
+	4. Asymmetric encryption takes relatively more time than the symmetric encryption.
+
+2. What is the difference between encrypting a string and hashing it?
+
+	Hashing is used to validate the integrity of the content by detecting all 
+	modifications and thereafter changes to a hash output. Encryption encodes data for 
+	the primary purpose of maintaining data confidentiality and security. It requires 
+	a private key to reversible function encrypted text to plain text.
+	In short, encryption is a two-way function that includes encryption and decryption 
+	whilst hashing is a one-way function that changes a plain text to a unique digest 
+	that is irreversible.
+	Hashing and encryption are different but also have some similarities. They are 	
+	both ideal in handling data, messages and information in computing systems. They 
+	both transform or change data into a different format. While encryption is 
+	reversible, hashing is not. Future improvements are very crucial given that 	
+	attackers keep changing tactics. This implies that an up-to-date way of hashing 
+	and encrypting is more palatable in modern computing systems.
